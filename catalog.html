@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="page__header  header">
+        <nav class="header__main-nav  main-nav">
+          <a href="#" class="main-nav__link">Информация</a>
+          <a href="#" class="main-nav__link">Фото и видео</a>
+          <a href="#" class="main-nav__link"><img src="./img/logo.svg" alt="Логотип Седоны" class="main-nav__logo"></a>
+          <a href="#" class="main-nav__link">Карта штата</a>
+          <a href="#" class="main-nav__link">Гостиницы</a>
+        </nav>
+      </header>
+      <main class="page__main  main">
+        <h1 class="main__title  visually-hidden">Подбор отелей в Седоне</h1>
+        <section class="main__form  form">
+          <div class="form__column">
+            <p class="form__title">Инфраструктура</p>
+            <ul class="form__list">
+              <li class="form__item">
+                <label for="pool">Бассейн
+                  <input type="checkbox" name="infrastructure" id="pool" checked>
+                </label>
+              </li>
+              <li class="form__item">
+                <label for="parking">Парковка
+                  <input type="checkbox" name="infrastructure" id="parking">
+                </label>
+              </li>
+              <li class="form__item">
+                <label for="wifi">Wi-Fi
+                  <input type="checkbox" name="infrastructure" id="wifi">
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__column">
+            <p class="form__title">Тип жилья</p>
+            <ul class="form__list">
+              <li class="form__item">
+                <label for="hotel">Гостиница
+                  <input type="checkbox" name="housing" id="hotel" checked>
+                </label>
+              </li>
+              <li class="form__item">
+                <label for="motel">Мотель
+                  <input type="checkbox" name="housing" id="motel" checked>
+                </label>
+              </li>
+              <li class="form__item">
+                <label for="apartments">Апартаменты
+                  <input type="checkbox" name="housing" id="apartments" checked>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__price">
+            <p class="form__title">Стоимость в сутки (р)</p>
+            <div class="form__price-range">
+              <p class="form__price__min">От 0</p>
+              <p class="form__price__max">До 3000</p>
+            </div>
+            <label>
+              <input class="form__price-control" type="range" name="price">
+            </label>
+          </div>
+          <button class="form__submit" type="button">Показать</button>
+        </section>
+        <section class="main__results  results">
+          <h2 class="reasons__title">Результаты поиска</h2>
+          <header class="results__header">
+            <p class="results__header-number">Найдено: 3</p>
+            <div class="results__header-sort  sort">
+              <p class="sort__title">Сортировка</p>
+              <button class="sort__button  sort__button--active">По цене</button>
+              <button class="sort__button">По типу</button>
+              <button class="sort__button">По рейтингу</button>
+              <div class="sort__controls">
+                <button class="sort__control  sort__control--up">По возрастанию</button>
+                <button class="sort__control  sort__control--down  sort__control--active">По убыванию</button>
+              </div>
+            </div>
+          </header>
+          <ul class="results__hotels">
+            <li class="results__hotel  hotel">
+              <img src="./img/hotel-amara.jpg" alt="Фото отеля Amara Resort & spa" class="hotel__img">
+              <div class="hotel__description">
+                <p class="hotel__title">Amara Resort & Spa</p>
+                <p class="hotel__type">Гостиница</p>
+                <p class="hotel__min-price">от 4000 р.</p>
+                <a href="#" class="hotel__show-more-button  button">Подробнее</a>
+                <button class="hotel__booking-button  button">Забронировать</button>
+              </div>
+              <div class="hotel__rating">
+                <p class="rating__label">Рейтинг 8,5</p>
+              </div>
+            </li>
+            <li class="results__hotel  hotel">
+              <img src="./img/hotel-desert.jpg" alt="Фото мотеля Desert Quail Inn" class="hotel__img">
+              <div class="hotel__description">
+                <p class="hotel__title">Desert Quail Inn</p>
+                <p class="hotel__type">Мотель</p>
+                <p class="hotel__min-price">от 3000 р.</p>
+                <a href="#" class="hotel__show-more-button  button">Подробнее</a>
+                <button class="hotel__booking-button  button">Забронировать</button>
+              </div>
+              <div class="hotel__rating">
+                <p class="rating__label">Рейтинг 8,9</p>
+              </div>
+            </li>
+            <li class="results__hotel  hotel">
+              <img src="./img/hotel-villas.jpg" alt="Фото апартаментов Villas at Poco Diablo" class="hotel__img">
+              <div class="hotel__description">
+                <p class="hotel__title">Villas At Poco Diablo</p>
+                <p class="hotel__type">Апартаменты</p>
+                <p class="hotel__min-price">от 2000 р.</p>
+                <a href="#" class="hotel__show-more-button  button">Подробнее</a>
+                <button class="hotel__booking-button  button">Забронировать</button>
+              </div>
+              <div class="hotel__rating">
+                <p class="rating__label">Рейтинг 9,2</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="page__footer  footer">
+        <section class="footer__contacts  contacts">
+          <p class="contacts__hashtag">#visitsedona</p>
+          <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
+        </section>
+        <section class="footer__social  social">
+          <a class="social-link  social-link--twitter">
+            <span>Мы в Twitter</span>
+            <img src="./img/icon-twitter.svg" alt="Иконка Twitter" class="social__icon">
+          </a>
+          <a class="social-link  social-link--facebook">
+            <span>Мы в Facebook</span>
+            <img src="./img/icon-fb.svg" alt="Иконка Facebook" class="social__icon">
+          </a>
+          <a class="social-link  social-link--youtube">
+            <span>Мы в YouTube</span>
+            <img src="./img/icon-youtube.svg" alt="Иконка YouTube" class="social__icon">
+          </a>
+        </section>
+        <div class="footer__copyright  copyright">
+          <p class="copyright__text">Website by</p>
+          <img src="./img/logo-htmlacademy.svg" alt="Логотип HTMLAcademy" class="copyright__logo">
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
