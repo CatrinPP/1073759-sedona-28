@@ -261,7 +261,7 @@ img {
 }
 
 .date-request {
-  padding: 55px 0;
+  padding: 55px 0 0;
 
   color: var(--basic-black);
   font-weight: 700;
@@ -330,11 +330,23 @@ img {
   width: 1200px;
 }
 
+.footer {
+  display: flex;
+  padding: 30px 130px;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .contacts {
   color: var(--basic-black);
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
+}
+
+.contacts p {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .contacts a {
@@ -346,8 +358,15 @@ img {
 }
 
 .copyright {
+  display: flex;
   color: var(--basic-black);
   line-height: 26px;
+  align-items: center;
+}
+
+.copyright p {
+  margin: 0;
+  margin-right: 10px;
 }
 
 .form {
