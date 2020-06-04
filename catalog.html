@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
@@ -10,9 +11,9 @@
         <nav class="header__main-nav  main-nav">
           <a href="#" class="main-nav__link">Информация</a>
           <a href="#" class="main-nav__link">Фото и видео</a>
-          <a href="#" class="main-nav__link"><img src="./img/logo.svg" alt="Логотип Седоны" class="main-nav__logo"></a>
+          <a href="./index.html" class="main-nav__link"><img src="./img/logo.svg" alt="Логотип Седоны" class="main-nav__logo"></a>
           <a href="#" class="main-nav__link">Карта штата</a>
-          <a href="#" class="main-nav__link">Гостиницы</a>
+          <a href="#" class="main-nav__link  main-nav__link--active">Гостиницы</a>
         </nav>
       </header>
       <main class="page__main  main">
@@ -71,11 +72,11 @@
           <button class="form__submit" type="button">Показать</button>
         </section>
         <section class="main__results  results">
-          <h2 class="reasons__title">Результаты поиска</h2>
+          <h2 class="visually-hidden">Результаты поиска</h2>
           <header class="results__header">
             <p class="results__header-number">Найдено: 3</p>
             <div class="results__header-sort  sort">
-              <p class="sort__title">Сортировка</p>
+              <p>Сортировка</p>
               <button class="sort__button  sort__button--active">По цене</button>
               <button class="sort__button">По типу</button>
               <button class="sort__button">По рейтингу</button>
@@ -93,7 +94,7 @@
                 <p class="hotel__type">Гостиница</p>
                 <p class="hotel__min-price">от 4000 р.</p>
                 <a href="#" class="hotel__show-more-button  button">Подробнее</a>
-                <button class="hotel__booking-button  button">Забронировать</button>
+                <button class="hotel__booking-button  button  button--dark">Забронировать</button>
               </div>
               <div class="hotel__rating">
                 <p class="rating__label">Рейтинг 8,5</p>
@@ -106,7 +107,7 @@
                 <p class="hotel__type">Мотель</p>
                 <p class="hotel__min-price">от 3000 р.</p>
                 <a href="#" class="hotel__show-more-button  button">Подробнее</a>
-                <button class="hotel__booking-button  button">Забронировать</button>
+                <button class="hotel__booking-button  button  button--dark">Забронировать</button>
               </div>
               <div class="hotel__rating">
                 <p class="rating__label">Рейтинг 8,9</p>
@@ -119,7 +120,7 @@
                 <p class="hotel__type">Апартаменты</p>
                 <p class="hotel__min-price">от 2000 р.</p>
                 <a href="#" class="hotel__show-more-button  button">Подробнее</a>
-                <button class="hotel__booking-button  button">Забронировать</button>
+                <button class="hotel__booking-button  button  button--dark">Забронировать</button>
               </div>
               <div class="hotel__rating">
                 <p class="rating__label">Рейтинг 9,2</p>
