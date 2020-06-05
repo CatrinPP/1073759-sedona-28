@@ -23,19 +23,16 @@
             <p class="form__title">Инфраструктура</p>
             <ul class="form__list">
               <li class="form__item">
-                <label for="pool">Бассейн
-                  <input class="visually-hidden" type="checkbox" name="infrastructure" id="pool" checked>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="infrastructure" id="pool" checked>
+                <label for="pool">Бассейн</label>
               </li>
               <li class="form__item">
-                <label for="parking">Парковка
-                  <input class="visually-hidden" type="checkbox" name="infrastructure" id="parking">
-                </label>
+                <input class="visually-hidden" type="checkbox" name="infrastructure" id="parking">
+                <label for="parking">Парковка</label>
               </li>
               <li class="form__item">
-                <label for="wifi">Wi-Fi
-                  <input class="visually-hidden" type="checkbox" name="infrastructure" id="wifi">
-                </label>
+                <input class="visually-hidden" type="checkbox" name="infrastructure" id="wifi">
+                <label for="wifi">Wi-Fi</label>
               </li>
             </ul>
           </div>
@@ -43,33 +40,37 @@
             <p class="form__title">Тип жилья</p>
             <ul class="form__list">
               <li class="form__item">
-                <label for="hotel">Гостиница
-                  <input class="visually-hidden" type="checkbox" name="housing" id="hotel" checked>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="housing" id="hotel" checked>
+                <label for="hotel">Гостиница</label>
               </li>
               <li class="form__item">
-                <label for="motel">Мотель
-                  <input class="visually-hidden" type="checkbox" name="housing" id="motel" checked>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="housing" id="motel" checked>
+                <label for="motel">Мотель</label>
               </li>
               <li class="form__item">
-                <label for="apartments">Апартаменты
-                  <input class="visually-hidden" type="checkbox" name="housing" id="apartments" checked>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="housing" id="apartments" checked>
+                <label for="apartments">Апартаменты</label>
               </li>
             </ul>
           </div>
           <div class="form__price">
             <p class="form__title">Стоимость в сутки (р)</p>
             <div class="form__price-range">
-              <p class="form__price__min">От 0</p>
-              <p class="form__price__max">До 3000</p>
+              <p>От 0</p>
+              <p>До 3000</p>
             </div>
-            <label>
-              <input class="form__price-control" type="range" name="price">
-            </label>
+            <div class="form__price-controls  range">
+              <div class="range__scale">
+                <div class="range__bar" style="
+                  width: 70%"></div>
+              </div>
+              <div class="range__toggle range__toggle--min" tabindex="0"></div>
+              <div class="range__toggle range__toggle--max" tabindex="0" style="
+                left: 70%
+              "></div>
+            </div>
+            <button class="form__submit" type="button">Показать</button>
           </div>
-          <button class="form__submit" type="button">Показать</button>
         </section>
         <section class="main__results  results">
           <h2 class="visually-hidden">Результаты поиска</h2>
@@ -81,8 +82,16 @@
               <button class="sort__button">По типу</button>
               <button class="sort__button">По рейтингу</button>
               <div class="sort__controls">
-                <button class="sort__control  sort__control--up">По возрастанию</button>
-                <button class="sort__control  sort__control--down  sort__control--active">По убыванию</button>
+                <button class="sort__control  sort__control--up">По возрастанию
+                  <svg width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+                    </svg>
+                </button>
+                <button class="sort__control  sort__control--down  sort__control--active">По убыванию
+                  <svg width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 10L0 0H11" fill="#CACACA"/>
+                    </svg>
+                </button>
               </div>
             </div>
           </header>
@@ -91,12 +100,14 @@
               <img src="./img/hotel-amara.jpg" alt="Фото отеля Amara Resort & spa" class="hotel__img">
               <div class="hotel__description">
                 <p class="hotel__title">Amara Resort & Spa</p>
-                <p class="hotel__type">Гостиница</p>
-                <p class="hotel__min-price">от 4000 р.</p>
+                <div class="hotel__data">
+                  <p>Гостиница</p>
+                  <p>от 4000 р.</p>
+                </div>
                 <a href="#" class="hotel__show-more-button  button">Подробнее</a>
                 <button class="hotel__booking-button  button  button--dark">Забронировать</button>
               </div>
-              <div class="hotel__rating">
+              <div class="hotel__rating  rating  rating--4">
                 <p class="rating__label">Рейтинг 8,5</p>
               </div>
             </li>
@@ -104,12 +115,14 @@
               <img src="./img/hotel-desert.jpg" alt="Фото мотеля Desert Quail Inn" class="hotel__img">
               <div class="hotel__description">
                 <p class="hotel__title">Desert Quail Inn</p>
-                <p class="hotel__type">Мотель</p>
-                <p class="hotel__min-price">от 3000 р.</p>
+                <div class="hotel__data">
+                  <p>Мотель</p>
+                  <p>от 3000 р.</p>
+                </div>
                 <a href="#" class="hotel__show-more-button  button">Подробнее</a>
                 <button class="hotel__booking-button  button  button--dark">Забронировать</button>
               </div>
-              <div class="hotel__rating">
+              <div class="hotel__rating  rating  rating--3">
                 <p class="rating__label">Рейтинг 8,9</p>
               </div>
             </li>
@@ -117,12 +130,14 @@
               <img src="./img/hotel-villas.jpg" alt="Фото апартаментов Villas at Poco Diablo" class="hotel__img">
               <div class="hotel__description">
                 <p class="hotel__title">Villas At Poco Diablo</p>
-                <p class="hotel__type">Апартаменты</p>
-                <p class="hotel__min-price">от 2000 р.</p>
+                <div class="hotel__data">
+                  <p>Апартаменты</p>
+                  <p>от 2000 р.</p>
+                </div>
                 <a href="#" class="hotel__show-more-button  button">Подробнее</a>
                 <button class="hotel__booking-button  button  button--dark">Забронировать</button>
               </div>
-              <div class="hotel__rating">
+              <div class="hotel__rating  rating  rating--2">
                 <p class="rating__label">Рейтинг 9,2</p>
               </div>
             </li>
@@ -137,15 +152,15 @@
         <section class="footer__social  social">
           <a class="social-link  social-link--twitter" href="#">
             <span>Мы в Twitter</span>
-            <img src="./img/icon-twitter.svg" alt="Иконка Twitter" class="social__icon">
+            <img src="./img/icon-twitter.svg" alt="Иконка Twitter">
           </a>
           <a class="social-link  social-link--facebook" href="#">
             <span>Мы в Facebook</span>
-            <img src="./img/icon-fb.svg" alt="Иконка Facebook" class="social__icon">
+            <img src="./img/icon-fb.svg" alt="Иконка Facebook">
           </a>
           <a class="social-link  social-link--youtube" href="#">
             <span>Мы в YouTube</span>
-            <img src="./img/icon-youtube.svg" alt="Иконка YouTube" class="social__icon">
+            <img src="./img/icon-youtube.svg" alt="Иконка YouTube">
           </a>
         </section>
         <div class="footer__copyright  copyright">
